@@ -6,29 +6,24 @@ let navigation = document.querySelector('.header-navigation');
 navigation.classList.remove('header-navigation--nojs');
 toggle.classList.remove('page-header__toggle--nojs');
 
-toggle.onclick = function() {
+toggle.onclick = function () {
   nav.classList.toggle('page-header__navigation--closed');
   toggle.classList.toggle('page-header__toggle--closed');
 };
 
-// index map
+// modal
 
-let mapImage = document.querySelector('.contacts__map-link');
-let map = document.querySelector('.contacts__map');
+const modal = document.querySelector('.modal');
+const cartButtons = document.querySelectorAll('.cart-button');
+const overlay = document.querySelector('.modal__overlay');
 
-mapImage.classList.add('contacts__map-link--hidden');
-map.classList.remove('contacts__map--nojs');
-
-//modal
-
-let modal = document.querySelector('.modal');
-let cartButton = document.querySelector('.cart-button');
-let overlay = document.querySelector('.modal__overlay');
-
-cartButton.onclick = function() {
-  modal.classList.add('modal--open');
+const toggleModal = function() {
+  var changeModal = modal.classList.toggle('modal--open');
+  return changeModal;
 }
 
-overlay.onclick = function() {
-  modal.classList.remove('modal--open');
+for (let cartBtn of cartButtons) {
+  cartBtn.addEventListener ("click", toggleModal);
 }
+
+overlay.addEventListener ("click", toggleModal);

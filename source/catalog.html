@@ -51,7 +51,7 @@
           </a>
         </li>
         <li class="header-navigation__item header-navigation__item--cart header-navigation__item--inner">
-          <a class="header-navigation__link header-navigation__link--cart link" href="#">
+          <a class="header-navigation__link header-navigation__link--cart cart-button link" href="#">
             <svg class="header-navigation__icon header-navigation__icon--cart" width="21" height="18"
               viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="img/sprite.svg#cart" />
@@ -107,7 +107,7 @@
             <p class="catalog-item__details">Рост 30 см, вес 200 г</p>
             <div class="catalog-item__buy-wrapper">
               <b class="catalog-item__price">1 200 руб.</b>
-              <button class="catalog-item__button cart-button button">
+              <button class="catalog-item__button cart-button button" type="button">
                 <svg class="catalog-item__cart" width="21" height="18" viewBox="0 0 21 18" fill="none">
                   <use href="img/sprite.svg#catalog-cart" />
                 </svg>
@@ -140,7 +140,7 @@
             <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__buy-wrapper">
               <b class="catalog-item__price">690 руб.</b>
-              <button class="catalog-item__button cart-button button">
+              <button class="catalog-item__button cart-button button" type="button">
                 <svg class="catalog-item__cart" width="21" height="18" viewBox="0 0 21 18" fill="none">
                   <use href="img/sprite.svg#catalog-cart" />
                 </svg>
@@ -174,7 +174,7 @@
             <p class="catalog-item__details">Диаметр 30 см, высота 30 см</p>
             <div class="catalog-item__buy-wrapper">
               <b class="catalog-item__price">1 500 руб.</b>
-              <button class="catalog-item__button cart-button button">
+              <button class="catalog-item__button cart-button button" type="button">
                 <svg class="catalog-item__cart" width="21" height="18" viewBox="0 0 21 18" fill="none">
                   <use href="img/sprite.svg#catalog-cart" />
                 </svg>
@@ -260,6 +260,9 @@
   </footer>
 
   <dialog class="modal">
+    <button class="modal__overlay">
+      <span class="visually hidden">Закрыть модальное окно.</span>
+    </button>
     <div class="modal__wrapper">
       <section class="modal__content">
         <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
